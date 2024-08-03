@@ -72,8 +72,8 @@ main[b-xvhh9v6btv] {
     }
 
     .top-row[b-xvhh9v6btv], article[b-xvhh9v6btv] {
-        padding-left: 2rem !important;
-        padding-right: 1.5rem !important;
+        padding-left: 0;
+        padding-right: 0;
     }
 }
 /* /Layout/NavMenu.razor.rz.scp.css */
@@ -100,27 +100,61 @@ main[b-xvhh9v6btv] {
 .account_icon[b-kyd3mx2qys] {
     
 }
+.language-selector[b-kyd3mx2qys] {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+}
 
+.language-dropdown[b-kyd3mx2qys] {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 5px;
+    z-index: 1001; /* Increased z-index */
+    min-width: 100px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Added shadow for visibility */
+}
+
+    .language-dropdown button[b-kyd3mx2qys] {
+        display: block;
+        width: 100%;
+        padding: 5px 10px;
+        border: none;
+        background: none;
+        text-align: left;
+        cursor: pointer;
+    }
+
+        .language-dropdown button:hover[b-kyd3mx2qys] {
+            background-color: #f0f0f0;
+        }
 .navbar-logo[b-kyd3mx2qys] {
     width: 20%;
     height: auto;
-    min-width: 150px;
+    min-width: 100px;
     max-width: 200px;
     padding: 1rem;
 }
 .svg-container[b-kyd3mx2qys] {
     position: absolute;
-    top: 0px; /* Adjust this value to move the SVG up or down */
+    top: 0px;
     right: 2%;
-    z-index: 2
+    z-index: 2;
+    display: flex;
+    align-items: center;
 }
 .svg-container svg[b-kyd3mx2qys] {
     flex: 0 0 auto;
     margin: 10px 0 0 1vw; /* Adjust horizontal margin as needed */
+    cursor: pointer
 }
 .responsive-svg[b-kyd3mx2qys] {
-    width: 5vw;
-    height: 5vw;
+    width: 7.5vw;
+    height: 7.5vw;
     max-width: 4rem;
     max-height: 4rem;
 }
@@ -190,7 +224,7 @@ main[b-xvhh9v6btv] {
         left: -100%;
         height: 100vh;
         width: 250px;
-        background-color: white;
+        background-color: #F5E9BD;
         transition: left 0.3s ease;
         z-index: 999;
     }
@@ -223,4 +257,243 @@ main[b-xvhh9v6btv] {
     .mobile-menu-toggle[b-kyd3mx2qys] {
         display: none;
     }
+}
+/* /Pages/Home.razor.rz.scp.css */
+.brown-line[b-4cf811va2l] {
+    width: 75vw;
+    border: none;
+    height: 3px;
+    background-color: #907657;
+    margin: -15px auto auto auto; /* Centers the line and adds vertical space */
+    max-width: 75rem;
+}
+@media (min-width: 640.99px) {
+    .full-width-container[b-4cf811va2l] {
+        width: 100vw;
+        position: relative;
+        height: 30vw;
+        left: 50%;
+        right: 50%;
+        margin-left: -50vw;
+        margin-right: -50vw;
+        background-color: #F5E9BD;
+        display: flex;
+        flex-direction: column;
+        padding: 30px 0;
+        justify-content: center;
+        align-items: center;
+    }
+    .carousel-container[b-4cf811va2l] {
+        width: 100%;
+        max-width: 51vw;
+        overflow: hidden;
+        position: relative;
+        margin: 0 auto;
+    }
+    .flower-accent-top[b-4cf811va2l],
+    .flower-accent-bottom[b-4cf811va2l] {
+        position: absolute;
+        left: 0;
+        right: 0;
+        height: 4vw; /* Adjust as needed */
+        background-image: url('images/flower_accent.png');
+        background-repeat: repeat-x;
+        background-size: auto 100%;
+    }
+}
+    @media (max-width: 640.98px) {
+        .brown-line[b-4cf811va2l] {
+            display: none; /* This hides the line on smaller screens */
+        }
+
+        .clover-accent[b-4cf811va2l] {
+            display: none;
+        }
+
+        .main-content[b-4cf811va2l] {
+            margin: 0;
+        }
+
+        .carousel-container .carousel img[b-4cf811va2l] {
+            width: 50.0%; /* Instead of a fixed width */
+            object-fit: contain; /* Maintains aspect ratio */
+            padding: 5px;
+            /*min-width: 210px*/
+        }
+
+        .full-width-container[b-4cf811va2l] {
+            width: 100vw;
+            position: relative;
+            height: 30vh;
+            left: 50%;
+            right: 50%;
+            margin-left: -50vw;
+            margin-right: -50vw;
+            background-color: #F5E9BD;
+            display: flex;
+            flex-direction: column;
+            padding: 30px 0;
+            justify-content: center;
+            align-items: center;
+        }
+        .carousel-container[b-4cf811va2l] {
+            width: 100%;
+            max-width: 81vw;
+            overflow: hidden;
+            position: relative;
+            margin: 0 auto;
+        }
+        .flower-accent-top[b-4cf811va2l],
+        .flower-accent-bottom[b-4cf811va2l] {
+            position: absolute;
+            left: 0;
+            right: 0;
+            height: 10vw; /* Adjust as needed */
+            background-image: url('images/flower_accent.png');
+            background-repeat: repeat-x;
+            background-size: auto 100%;
+        }
+    }
+
+    .main-container[b-4cf811va2l] {
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+        padding: 20px;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    .main-content[b-4cf811va2l] {
+        text-align: center;
+        margin: 0 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .main-image[b-4cf811va2l] {
+        max-width: 100%;
+        height: auto;
+        height: 30vw; /* Instead of a fixed height */
+        object-fit: contain; /* Maintains aspect ratio */
+        min-height: 200px;
+    }
+
+    .clover-accent[b-4cf811va2l] {
+        height: 30vw; /* Adjust as needed */
+        object-fit: cover;
+        align-self: stretch;
+    }
+
+    .left-clover[b-4cf811va2l] {
+        transform: scaleX(-1);
+    }
+    /* ... other styles ... */
+
+    .main-content h1[b-4cf811va2l] {
+        font-size: clamp(24px, 2vw, 32px);
+        color: #907657;
+    }
+
+    .main-content h2[b-4cf811va2l] {
+        font-size: clamp(12px, 1.2vw, 24px);
+        color: #907657;
+    }
+
+.main-content p[b-4cf811va2l] {
+    font-size: clamp(16px, 1.5vw, 24px);
+    color: #907657;
+}
+
+.shop-title[b-4cf811va2l] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: clamp(36px, 3vw, 48px);
+    color: #907657;
+    padding: 2vh 0;
+}
+.spacer[b-4cf811va2l] {
+    height: 100px; /* Adjust this value to increase or decrease the space */
+    width: 100%;
+}
+.carousel[b-4cf811va2l] {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+        .carousel img[b-4cf811va2l] {
+            width: 33.3%; /* Instead of a fixed width */
+            object-fit: contain; /* Maintains aspect ratio */
+
+            padding: 5px;
+            /*min-width: 140px*/
+        }
+
+    .btn[b-4cf811va2l] {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(0,0,0,0.5);
+        color: white;
+        padding: 10px;
+        border: none;
+        cursor: pointer;
+    }
+
+    .btn-left[b-4cf811va2l] {
+        left: 10px;
+    }
+
+    .btn-right[b-4cf811va2l] {
+        right: 10px;
+    }
+
+
+.custom-button[b-4cf811va2l] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #E0B787; /* Light orange background */
+    color: white; /* White text */
+    text-decoration: none;
+    border-radius: 1vw; /* Rounded corners */
+    font-size: clamp(20px, 2vw, 28px);
+    font-weight: bold;
+    text-transform: lowercase;
+    transition: background-color 0.3s ease;
+    border: none; /* Remove any default border */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    height: 5vw;
+    width: 15vw;
+    min-width: 160px;
+    min-height: 60px;
+    margin: 2vh;
+}
+
+.ch-text[b-4cf811va2l]{
+    font-weight: 900;
+}
+
+.button-container[b-4cf811va2l] {
+    margin-top: 20px; /* Space between carousel and button */
+    text-align: center; /* Center the button if needed */
+}
+
+
+.flower-accent-top[b-4cf811va2l] {
+    top: 0;
+}
+
+.flower-accent-bottom[b-4cf811va2l] {
+    bottom: 0;
+    transform: rotate(180deg); /* Flip the bottom accent */
+}
+
+.full-width-container.green[b-4cf811va2l] {
+    background-color: #E0EED9;
+}
+.custom-button.green[b-4cf811va2l] {
+    background-color: #A2B89E; /* Or any color that fits your design for the green section */
 }

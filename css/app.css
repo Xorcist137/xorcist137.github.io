@@ -46,15 +46,69 @@
     font-weight: 900;
     font-style: normal;
 }
+@font-face {
+    font-family: 'Zen Old Mincho';
+    src: url('../fonts/ZenOldMincho-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    unicode-range: U+4E00-9FFF, U+3400-4DBF, U+20000-2A6DF, U+2A700-2B73F, U+2B740-2B81F, U+2B820-2CEAF;
+}
 
+@font-face {
+    font-family: 'Zen Old Mincho';
+    src: url('../fonts/ZenOldMincho-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    unicode-range: U+4E00-9FFF, U+3400-4DBF, U+20000-2A6DF, U+2A700-2B73F, U+2B740-2B81F, U+2B820-2CEAF;
+}
+
+@font-face {
+    font-family: 'Zen Old Mincho';
+    src: url('../fonts/ZenOldMincho-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    unicode-range: U+4E00-9FFF, U+3400-4DBF, U+20000-2A6DF, U+2A700-2B73F, U+2B740-2B81F, U+2B820-2CEAF;
+}
+
+@font-face {
+    font-family: 'Zen Old Mincho';
+    src: url('../fonts/ZenOldMincho-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    unicode-range: U+4E00-9FFF, U+3400-4DBF, U+20000-2A6DF, U+2A700-2B73F, U+2B740-2B81F, U+2B820-2CEAF;
+}
+
+@font-face {
+    font-family: 'Zen Old Mincho';
+    src: url('../fonts/ZenOldMincho-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+    unicode-range: U+4E00-9FFF, U+3400-4DBF, U+20000-2A6DF, U+2A700-2B73F, U+2B740-2B81F, U+2B820-2CEAF;
+}
 * {
-    font-family: 'Inknut Antiqua', serif;
+    font-family: 'Inknut Antiqua', 'Zen Old Mincho', serif;
 }
 
 html, body {
-    font-family: 'Inknut Antiqua', serif;
+    font-family: 'Inknut Antiqua', 'Zen Old Mincho', serif;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
 }
-
+:lang(zh), :lang(ch), .chinese-text {
+    font-family: 'Zen Old Mincho', 'Inknut Antiqua', serif;
+    font-weight: 900;
+}
+.mixed-content {
+    font-family: 'Inknut Antiqua', 'Zen Old Mincho', serif;
+}
+    .mixed-content:lang(zh), .mixed-content:lang(ch) {
+        font-weight: 900;
+    }
+.force-inknut {
+    font-family: 'Inknut Antiqua', serif !important;
+}
 h1:focus {
     outline: none;
 }
