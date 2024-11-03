@@ -8,6 +8,15 @@
             if (redirect && redirect !== location.href) {
                 history.replaceState(null, null, redirect);
             }
+
+            // Handle browser navigation
+            window.addEventListener('popstate', function (event) {
+                const currentPath = window.location.pathname;
+                if (currentPath !== '/' && !event.state) {
+                    // If there's no state, it means we need to handle the navigation
+                    history.replaceState({ handled: true }, '', currentPath);
+                }
+            });
         })();
     </script>
     <script src="js/carousel.js"></script>
@@ -35,11 +44,13 @@
         <a class="dismiss">🗙</a>
     </div>
     <script src="_framework/blazor.webassembly.js"></script>
+
     <script>
         window.initializeStripe = function () {
             window.stripe = Stripe('pk_test_51Q2q27KiIA0BqBP9jHNttEKxHFFEmfctH0QEBwAXBZZiYV3fj2tr8VXA9JafPJ4hBvSVBt8F7WRLd3dTFLowVocB00L9AhXna0');
             window.redirectToCheckout = async function (lineItems, location) {
                 let allowedCountries;
+
                 // Set allowed countries based on selected location
                 switch (location) {
                     case 'hongkong':
@@ -55,6 +66,7 @@
                         allowedCountries = ['HK', 'MO', 'TW'];
                         break;
                 }
+
                 const { error } = await window.stripe.redirectToCheckout({
                     lineItems: lineItems,
                     mode: 'payment',

@@ -5,9 +5,12 @@
     <meta charset="utf-8">
     <title>10AM10PM</title>
     <script type="text/javascript">
-        sessionStorage.redirect = location.href;
+        const segments = location.pathname.split('/');
+        const repo = segments[1];
+        const path = segments.slice(2).join('/');
+        sessionStorage.redirect = location.pathname;
+        location.replace(location.origin + '/' + (path ? '?' + path : ''));
     </script>
-    <meta http-equiv="refresh" content="0;URL='/'">
 </head>
 <body>
 </body>
