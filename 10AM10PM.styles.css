@@ -159,6 +159,12 @@ main[b-xvhh9v6btv] {
     max-width: 4rem;
     max-height: 4rem;
 }
+.currency-svg[b-kyd3mx2qys] {
+    width: 6.75vw; /* 10% smaller than 7.5vw */
+    height: 6.75vw;
+    max-width: 3.6rem; /* 10% smaller than 4rem */
+    max-height: 3.6rem;
+}
 .cart-count[b-kyd3mx2qys] {
     position: absolute;
     background-color: #917657;
@@ -344,6 +350,7 @@ main[b-xvhh9v6btv] {
     overflow: hidden;
     width: fit-content;
     background-color: white;
+    font-family: Arial;
 }
 
     .quantity-control button[b-8nebi77v7z] {
@@ -595,14 +602,10 @@ strong[b-ncxyjdjt8y] {
         width: 100vw;
         position: relative;
         height: 30vw;
-        left: 50%;
-        right: 50%;
-        margin-left: -50vw;
-        margin-right: -50vw;
         background-color: #F5E9BD;
         display: flex;
         flex-direction: column;
-        padding: 30px 0;
+        padding: auto;
         justify-content: center;
         align-items: center;
     }
@@ -672,6 +675,7 @@ strong[b-ncxyjdjt8y] {
             padding: 30px 0;
             justify-content: center;
             align-items: center;
+            
         }
         .carousel-container[b-4cf811va2l] {
             width: 100%;
@@ -689,6 +693,7 @@ strong[b-ncxyjdjt8y] {
             background-image: url('images/flower_accent.png');
             background-repeat: repeat-x;
             background-size: auto 100%;
+
         }
         .btn[b-4cf811va2l] {
             padding: 15px; /* Smaller buttons on mobile */
@@ -741,6 +746,7 @@ strong[b-ncxyjdjt8y] {
 .main-content p[b-4cf811va2l] {
     font-size: clamp(16px, 1.5vw, 24px);
     color: #907657;
+    white-space: pre-line;
 }
 
 .shop-title[b-4cf811va2l] {
@@ -807,7 +813,7 @@ strong[b-ncxyjdjt8y] {
     width: 15vw;
     min-width: 160px;
     min-height: 60px;
-    margin: 2vh;
+    margin: 0;
 }
 
 .ch-text[b-4cf811va2l]{
@@ -820,6 +826,7 @@ strong[b-ncxyjdjt8y] {
 }
 .mixed-content[b-4cf811va2l]{
     padding: 5pt;
+    margin-bottom: 1vh;
 }
 
 .flower-accent-top[b-4cf811va2l] {
@@ -963,7 +970,45 @@ strong[b-ncxyjdjt8y] {
 .left-column[b-aettxkuqa2], .right-column[b-aettxkuqa2] {
     flex: 1;
 }
+.quantity-control[b-aettxkuqa2] {
+    display: flex;
+    align-items: center;
+    border: 2px solid #E0B787;
+    border-radius: 8px;
+    overflow: hidden;
+    width: fit-content;
+    background-color: white;
+    font-family: Arial;
+    margin-bottom: 10px;
+}
 
+    .quantity-control button[b-aettxkuqa2] {
+        background-color: white;
+        color: black;
+        border: none;
+        padding: 5px 10px;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    .quantity-control input[b-aettxkuqa2] {
+        width: 40px;
+        text-align: center;
+        border: none;
+        background-color: white;
+        color: #907657;
+        font-weight: bold;
+        font-size: 16px;
+        padding: 5px 0;
+        -moz-appearance: textfield;
+    }
+
+        .quantity-control input[b-aettxkuqa2]::-webkit-outer-spin-button,
+        .quantity-control input[b-aettxkuqa2]::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
 .left-column[b-aettxkuqa2] {
     background-color: white; /* Changed from #E0EED9 to white */
     padding: 20px;
@@ -1094,6 +1139,8 @@ strong[b-ncxyjdjt8y] {
     transition: background-color 0.3s;
     width: 100%;
     margin-bottom: 10px;
+    border-radius: 5pt;
+    font-weight: bold;
 }
 
     .add-to-cart-button:hover[b-aettxkuqa2], .buy-now-button:hover[b-aettxkuqa2] {
@@ -1112,6 +1159,7 @@ strong[b-ncxyjdjt8y] {
     color: #907657;
     margin-bottom: 10px;
 }
+
 .bottom-section[b-aettxkuqa2] {
     background-color: white;
     padding: 40px 20px;
@@ -1166,8 +1214,12 @@ strong[b-ncxyjdjt8y] {
     margin-bottom: 5px;
     margin-left: 5px;
     text-align: left;
+    font-weight: bold;
 }
-
+.right-bottom p[b-aettxkuqa2],
+.right-bottom li[b-aettxkuqa2]{
+    color: #907657;
+}
 .product-price[b-aettxkuqa2] {
     font-size: 1.1rem;
     color: #907657;
@@ -1181,7 +1233,9 @@ strong[b-ncxyjdjt8y] {
         grid-template-columns: repeat(2, 1fr);
     }
 }
-
+.bottom-section h2[b-aettxkuqa2] {
+    font-weight: bold;
+}
 @media (max-width: 480px) {
     .related-products[b-aettxkuqa2] {
         grid-template-columns: 1fr;
@@ -1296,6 +1350,7 @@ strong[b-ncxyjdjt8y] {
     margin-bottom: 5px;
     margin-left: 5px;
     text-align: left;
+    font-weight: 600;
 }
 
 .product-price[b-a6ccubxkqi] {
