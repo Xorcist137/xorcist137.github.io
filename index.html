@@ -1,24 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script>
-        (function () {
-            const redirect = sessionStorage.redirect;
-            delete sessionStorage.redirect;
-            if (redirect && redirect !== location.href) {
-                history.replaceState(null, null, redirect);
-            }
-
-            // Handle browser navigation
-            window.addEventListener('popstate', function (event) {
-                const currentPath = window.location.pathname;
-                if (currentPath !== '/' && !event.state) {
-                    // If there's no state, it means we need to handle the navigation
-                    history.replaceState({ handled: true }, '', currentPath);
-                }
-            });
-        })();
-    </script>
     <script src="js/carousel.js"></script>
     <script src="https://js.stripe.com/v3/"></script>
     <meta charset="utf-8" />
@@ -46,14 +28,14 @@
     <script src="_framework/blazor.webassembly.js"></script>
 
     <script>
-        window.initializeStripe = function () {
-            window.stripe = Stripe('pk_test_51Q2q27KiIA0BqBP9jHNttEKxHFFEmfctH0QEBwAXBZZiYV3fj2tr8VXA9JafPJ4hBvSVBt8F7WRLd3dTFLowVocB00L9AhXna0');
-            window.redirectToCheckout = async function (lineItems, location) {
-                let allowedCountries;
+        nitializeStripe = function () {
+        ow.stripe = Stripe('pk_test_51Q2q27KiIA0BqBP9jHNttEKxHFFEmfctH0QEBwAXBZZiYV3fj2tr8VXA9JafPJ4hBvSVBt8F7WRLd3dTFLowVocB00L9AhXna0');
+            edirectToCheckout = async function (lineItems, location) {
+            allowedCountries;
 
-                // Set allowed countries based on selected location
-                switch (location) {
-                    case 'hongkong':
+        // Set allowed countries based on selected location
+        switch (location) {
+                case 'hongkong':
                         allowedCountries = ['HK'];
                         break;
                     case 'macau':
@@ -67,22 +49,31 @@
                         break;
                 }
 
-                const { error } = await window.stripe.redirectToCheckout({
-                    lineItems: lineItems,
-                    mode: 'payment',
+        const { error } = await window.stripe.redirectToCheckout({
+            lineItems: lineItems,
+            mode: 'payment',
                     shippingAddressCollection: {
-                        allowedCountries: allowedCountries,
-                    },
-                    successUrl: window.location.origin + '/success',
-                    cancelUrl: window.location.origin + '/canceled',
+                allowedCountries: allowedCountries,
+            },
+            successUrl: window.location.origin + '/success',
+                elUrl: window.location.origin + '/canceled',
                 });
-                if (error) {
-                    console.error('Error:', error);
+            error) {
+                ole.error('Error:', error);
                 }
             };
         }
-        // Call initializeStripe after Blazor is loaded
-        Blazor.start().then(initializeStripe);
+                zeStripe after Blazor is loaded
+            ().then(initializeStripe);
+    </script>
+    <script>
+            {
+                 = sessionStorage.redirect;
+                onStorage.redirect;
+                 && redirect != location.href) {
+                    aceState(null, null, redirect);
+            }
+        })();
     </script>
 </body>
 </html>
