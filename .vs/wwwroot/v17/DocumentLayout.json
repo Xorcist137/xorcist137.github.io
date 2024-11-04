@@ -36,7 +36,7 @@
               "RelativeDocumentMoniker": "404.html",
               "ToolTip": "C:\\Users\\Sam\\source\\repos\\10AM10PM\\bin\\Release\\net8.0\\browser-wasm\\publish\\wwwroot\\404.html",
               "RelativeToolTip": "404.html",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
               "WhenOpened": "2024-11-03T23:04:29.016Z",
               "EditorCaption": ""
@@ -73,8 +73,7 @@
               "RelativeToolTip": "index.html",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2024-07-23T22:37:30.746Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-23T22:37:30.746Z"
             }
           ]
         }
