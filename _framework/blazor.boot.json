@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "10AM10PM",
   "resources": {
-    "hash": "sha256-ouKXiow2KYZW6nFjBT96NUXBahqBd0UdwXbx530/9oA=",
+    "hash": "sha256-Kalb6yVa6WB1KavE7qJ7La3+WJ3ZPe47ysWRFzntOas=",
     "jsModuleNative": {
       "dotnet.native.8.0.5.ais9hk7mpu.js": "sha256-boyHe+0RMZDkzBKGhsrnXPhPg3oZ6UqJnTUzngJPjNY="
     },
@@ -17,7 +17,7 @@
       "icudt_no_CJK.dat": "sha256-L7sV7NEYP37/Qr2FPCePo5cJqRgTXRwGHuwF5Q+0Nfs="
     },
     "assembly": {
-      "10AM10PM.wasm": "sha256-JTeFm96xa+fCCEHkOcwvuWaFpSRneurJfTikQC2KWSY=",
+      "10AM10PM.wasm": "sha256-UQXJjPWuR4zE4RA4sX+H/zZSb29TNkrm+TdxfMmznW8=",
       "BouncyCastle.Cryptography.wasm": "sha256-fNNkhoF1EtOBvzedd32l0piPt54gxoGNl/pAhfr3ze4=",
       "MailKit.wasm": "sha256-1U+TZF2FXVG2clmRpYObh+pFPPgiL/H5FEWxxhg7dJ4=",
       "Microsoft.AspNetCore.Components.wasm": "sha256-Wabt8HwhiuL6GCg3b0FbyK+RDpcF/ZnTZRu9mcoTd8o=",
